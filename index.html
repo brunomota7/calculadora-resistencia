@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Calculadora de Resistência Elétrica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./imagens/eletrica.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="banner">
+    <div>
+      <div>
+        <h2>Calculadora da resistência elétrica</h2>
+      </div>
+      <div>
+        <h3>
+          "Resistência elétrica (medida no SI: ohms) é a capacidade física de um corpo qualquer se opor à passagem de corrente elétrica mesmo quando existe uma diferença de potencial aplicada, capacidade calculada pela Primeira Lei de Ohm, e, segundo o Sistema Internacional de Unidades (SI), é medida em ohms."
+          <a href="https://pt.wikipedia.org/wiki/Resist%C3%AAncia_el%C3%A9trica">Ver mais...</a>
+        </h3>
+      </div>
+      <div>
+        <a href="#containerCalc" class="btnCalc">Usar Calculadora</a>
+      </div>
+    </div>
+    <img src="./imagens/resistencia-eletrica-5.webp" alt="imagem">
+  </section>
+
+  <div id="containerCalc">
+
+    <label for="resistividade">Resistividade (ρ):</label>
+    <input type="number" id="resistividade" required>
+
+    <label for="comprimento">Comprimento (Ω.m):</label>
+    <input type="number" id="comprimento" required>
+
+    <label for="areaTransversal">Área Transversal (m²):</label>
+    <input type="number" id="areaTransversal" required>
+
+    <button onclick="calculateResistance()" class="btn">Calcular</button>
+
+    <label for="resistance">Resistência (Ω):</label>
+    <input type="text" id="resistance" readonly>
+
+    <button class="btnReloadPage">
+      Refazer <ion-icon name="reload-outline"></ion-icon>
+    </button>
+
+  </div>
+
+  <div class="container">
+    <h2>Como funciona o cálculo ?</h2>
+
+    <div class="main-container">
+      <p>
+        A resistência elétrica (R) pode ser definida pela seguinte equação:
+      </p>
+      <br>
+      <img src="./imagens/segunda-lei-de-ohm.png" alt="imagen">
+      <br>
+      <p>
+        A segunda Lei de Ohm, também conhecida como a Lei de Joule ou a Lei da Potência, é uma lei fundamental da física que descreve a relação entre a corrente elétrica, a resistência elétrica e a potência elétrica em um circuito elétrico. Essa lei é uma extensão da Lei de Ohm original, que relaciona a corrente elétrica e a resistência elétrica. <br>
+        A segunda Lei de Ohm pode ser expressa da seguinte forma: a potência elétrica dissipada em um circuito elétrico é igual ao produto da corrente elétrica pelo quadrado da resistência elétrica. Essa relação pode ser escrita na forma matemática: <br><br>
+
+        R = P * L / A <br><br>
+
+        Onde: <br><br>
+
+        P é a potência elétrica dissipada em um circuito elétrico, medida em watts (W) <br>
+        I é a corrente elétrica que flui através do circuito elétrico, medida em amperes (A) <br>
+        R é a resistência elétrica do circuito elétrico, medida em ohms (Ω) <br>
+        Essa equação pode ser reorganizada para expressar qualquer uma das três variáveis em termos das outras duas, conforme necessário. <br>
+        A segunda Lei de Ohm é importante porque nos permite calcular a quantidade de energia elétrica que é dissipada em forma de calor em um circuito elétrico, dada a corrente elétrica e a resistência elétrica envolvidas. Essa lei é particularmente relevante para a segurança elétrica, pois o superaquecimento de componentes elétricos devido à dissipação excessiva de energia elétrica pode causar incêndios e outros riscos. <br>
+        É importante observar que a Lei de Joule só se aplica a circuitos elétricos que são puramente resistivos. Ou seja, ela não se aplica a circuitos que contêm elementos capacitivos ou indutivos, que podem armazenar e liberar energia elétrica em ciclos repetidos. Para esses tipos de circuitos, outras leis e fórmulas devem ser utilizadas para descrever a relação entre a corrente elétrica, a voltagem e a potência elétrica. <br>
+      </p>
+    </div>
+
+  </div>
+
+  <section class="rodaPe">
+    <div class="infRodaPe">
+      <div class="infPessoal">
+        <h3> Desenvolvedor: </h3>
+        <p>Bruno Mota</p>
+      </div>
+      <div class="contato">
+        <h3> Contato: </h3>
+        <a href="https://www.instagram.com/_bmota7/"> Instagram <ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://github.com/bMota7"> GitHub <ion-icon name="logo-github"></ion-icon></a>
+        <a href="#"> Email <ion-icon name="mail-outline"></ion-icon></a>
+      </div>
+      <div class="referencias">
+        <h3> Referências: </h3>
+        <a href="https://pt.wikipedia.org/wiki/Resist%C3%AAncia_el%C3%A9trica">Wikipedia</a>
+        <a href="https://brasilescola.uol.com.br/fisica/calculo-resistencia-eletrica.htm">Brasil Escola</a>
+      </div>
+    </div>
+
+    <div class="direitosReservados">
+      <p> © 2023 Todos os direitos reservados</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
